@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cepri.device.utils.activity.SecurityunitActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/bt_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ui_str_on"/>
+
+            <Button
+                android:id="@+id/bt_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/ui_str_off"/>
+
+            <View
+                style="@style/diver_line_horizontal"
+                android:layout_below="@id/bt_off"
+                />
+
+            <EditText
+                android:id="@+id/et_baudrate"
+                style="@style/edit_input"
+                android:layout_below="@id/bt_off"
+                android:hint="通讯波特率"
+                />
+
+            <EditText
+                android:id="@+id/et_databits"
+                style="@style/edit_input"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/bt_off"
+                android:hint="数据位"/>
+
+            <EditText
+
+                android:id="@+id/et_parity"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/et_baudrate"
+                android:hint="校验位。0为无校验，1为奇校验，2为偶校验，3为Mark校验，4为Space校验。"/>
+
+            <EditText
+                android:id="@+id/et_stopbits"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/et_parity"
+                android:hint="停止位。0为无停止位，1为1位停止位，2为2位停止位，3为1.5位停止位。"/>
+
+            <EditText
+                android:id="@+id/et_blockmode"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/et_stopbits"
+                android:hint="阻塞模式。0为无阻塞，1为阻塞"/>
+
+            <Button
+                android:id="@+id/bt_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_blockmode"
+                android:text="Config"/>
+
+
+            <View
+                style="@style/diver_line_horizontal"
+                android:layout_below="@id/bt_config"
+                />
+
+            <EditText
+                android:id="@+id/et_mode"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/bt_config"
+                android:hint="SPI模式。0，1，2，3分别对应模式0，1，2，3"/>
+
+            <EditText
+                android:id="@+id/et_speed"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/et_mode"
+                android:hint="SPI时钟。单位为Hz，范围为0－18M。"/>
+
+            <EditText
+                android:id="@+id/et_halfword"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/et_speed"
+                android:hint="传输模式。 0为8位，1为16位。"/>
+
+            <Button
+                android:id="@+id/bt_SpiConfig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_halfword"
+                android:text="SpiConfig"/>
+
+
+            <View
+                style="@style/diver_line_horizontal"
+                android:layout_below="@id/bt_SpiConfig"
+                />
+
+            <EditText
+                android:id="@+id/et_output"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/bt_SpiConfig"
+                android:hint="发送内容"/>
+
+            <EditText
+                android:id="@+id/et_Count"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/et_output"
+                android:hint="发送内容单页数量"/>
+
+            <Button
+                android:id="@+id/bt_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_Count"
+                android:text="Send"/>
+
+
+            <View
+                style="@style/diver_line_horizontal"
+                android:layout_below="@id/bt_send"
+                />
+
+            <EditText
+                android:id="@+id/et_rcCount"
+                style="@style/edit_input"
+                android:layout_width="match_parent"
+                android:layout_below="@id/bt_send"
+                android:hint="接收内容单页数量"/>
+
+            <TextView
+                android:id="@+id/tv_revc_info"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/et_rcCount"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/bt_recv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_revc_info"
+                android:text="Recv"/>
+
+            <View
+                style="@style/diver_line_horizontal"
+                android:layout_below="@id/bt_recv"
+                />
+
+            <EditText
+                android:id="@+id/et_timeout_in"
+                style="@style/edit_input"
+                android:layout_below="@id/bt_recv"
+                android:hint="设置接收超时时间-微秒"/>
+            <EditText
+                android:id="@+id/et_timeout_out"
+                android:layout_alignParentRight="true"
+                style="@style/edit_input"
+                android:layout_below="@id/bt_recv"
+                android:hint="设置发送超时时间-微秒"/>
+
+            <Button
+                android:id="@+id/bt_set_timeout_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_timeout_in"
+                android:text="设置接收超时"/>
+            <Button
+                android:id="@+id/bt_set_timeout_out"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_timeout_in"
+                android:text="设置接收超时"/>
+
+            <View
+                style="@style/diver_line_vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@id/bt_set_timeout_in"
+                android:layout_below="@id/bt_recv"
+                />
+            <View
+                style="@style/diver_line_horizontal"
+                android:layout_below="@id/bt_set_timeout_out"
+                />
+            <Button
+                android:id="@+id/bt_clearsendcache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bt_set_timeout_out"
+                android:text="清除发送缓存"/>
+            <Button
+                android:id="@+id/bt_clearrecvcache"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bt_set_timeout_out"
+                android:text="清除接收缓存"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</LinearLayout>

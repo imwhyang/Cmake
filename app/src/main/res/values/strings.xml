@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NativeTest</string>
+    <string name="ui_str_on">Turn on</string>
+    <string name="ui_str_off">Turn off</string>
+    <string name="ui_tip_success">成功</string>
+    <string name="ui_tip_fail">失败</string>
+    <string name="ui_tip_port_error">端口未打开</string>
+    <string name="ui_tip_make_sure">请确认信息</string>
+
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cepri.device.utils.MainActivity">
+
+
+    <Button
+        android:id="@+id/bt_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="SCAN"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="30dp"/>
+
+    <Button
+        android:id="@+id/bt_securityunit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="SECURITYUNIT"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="160dp"/>
+
+    <Button
+        android:id="@+id/bt_r_esam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="R_ESAM"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="101dp"/>
+
+    <Button
+        android:id="@+id/bt_irda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="IRDA"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="231dp"/>
+
+    <Button
+        android:id="@+id/bt_laserirda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="LaserIRDA"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="306dp"/>
+
+    <Button
+        android:id="@+id/bt_rs485"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="RS485"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="354dp"/>
+</LinearLayout>
